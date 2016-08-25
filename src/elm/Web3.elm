@@ -38,11 +38,11 @@ type alias Context     = String
 -- API functions
 getBlockByNumber : Context -> Int -> Task RpcError Block
 getBlockByNumber ctx i =
-  Rpc.request ctx "eth_getBlockByNumber" [JE.int i, JE.bool True] Block.block
+  Rpc.request ctx "exp_getBlockByNumber" [JE.int i, JE.bool True] Block.block
 
 blockNumber : Context -> Task RpcError Int
 blockNumber ctx =
-  Rpc.request ctx "eth_blockNumber" [] Codec.hexInt
+  Rpc.request ctx "exp_blockNumber" [] Codec.hexInt
 
 
 -- Formatting utilities
