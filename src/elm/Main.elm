@@ -29,7 +29,7 @@ type Msg
 init : (Model, Cmd Msg)
 init =
   let
-    url = "http://canchain.com:8545"
+    url = "http://localhost:9656"
     (chain, cmd) = Blockchain.init 
       { envelope    = ToBlockchain
       , onError     = Error
